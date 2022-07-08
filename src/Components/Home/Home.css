@@ -120,6 +120,10 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .container { 
+        margin-inline: auto;
+    }
+
     .projects {
         grid-template-columns: 1fr;
     }
