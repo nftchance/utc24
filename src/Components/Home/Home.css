@@ -4,7 +4,7 @@
 }
 
 .container { 
-    margin-inline: 30px;
+    margin-inline: auto;
     max-width: 1080px;
 }
 
@@ -121,7 +121,7 @@
 
 @media only screen and (max-width: 992px) {
     .container { 
-        margin-inline: auto;
+        margin-inline: 30px;
     }
 
     .projects {
