@@ -1,6 +1,12 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
 import "./Home.css";
+
+library.add(fab)
 
 const Home = () => {
     const projects = [{
@@ -119,6 +125,17 @@ const Home = () => {
                             rel="noreferrer"
                         >
                             APPLY NOW
+                        </a>
+                        <a
+                            href="https://twitter.com/utc_24"
+                            className="button secondary"
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{
+                                marginLeft: 15
+                            }}
+                        >
+                            <FontAwesomeIcon icon={['fab', 'twitter']} />
                         </a>
                     </div>
                 </div>
