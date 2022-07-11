@@ -119,7 +119,7 @@ const Home = () => {
                         <p className="lead">A digital family focused on redefining the way groups work towards creating incredible things.</p>
 
                         <a 
-                            href="https://discord.gg/V3npCNntse"
+                            href="https://discord.gg/ftQyGT7Hfe"
                             className="button"
                             target="_blank"
                             rel="noreferrer"
@@ -189,7 +189,7 @@ const Home = () => {
                     <p className="lead">With no application fee or primary focus of revenue generation, UTC±24 is always open and focused on building a family of incredibly talented and passionate people.</p>
 
                     <a 
-                        href="https://discord.gg/V3npCNntse"
+                        href="https://discord.gg/ftQyGT7Hfe"
                         target="_blank"
                         rel="noreferrer"
                         className="button"
