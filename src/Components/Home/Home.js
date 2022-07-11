@@ -124,7 +124,7 @@ const Home = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            APPLY NOW
+                            APPLY NOW  
                         </a>
                         <a
                             href="https://twitter.com/utc_24"
@@ -140,7 +140,10 @@ const Home = () => {
                     </div>
                 </div>
 
-                <h2>GALAXIES BEING EXPLORED</h2>
+                <h2 style={{
+                    position: "relative",
+                    zIndex: 2
+                }}>GALAXIES BEING EXPLORED</h2>
                 <p className="lead">At UTC±24 the primary focus lies within positive impact and that brings a vast universe to wonder.</p>
 
                 <div className="projects">
