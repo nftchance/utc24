@@ -21,6 +21,10 @@ const Home = () => {
         name: 'Scooper',
         url: 'http://scooper.utc24.io',
         description: 'Save the NFTs and ETH sitting in a compromised Ethereum wallet.'
+    }, { 
+        name: 'Colorspace',
+        url: 'http://colorspace.utc24.io',
+        description: '3D color scale visualizer to create better digital palettes.'
     }]
 
     const members = [{
