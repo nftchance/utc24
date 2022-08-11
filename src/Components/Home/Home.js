@@ -25,6 +25,10 @@ const Home = () => {
         name: 'Colorspace',
         url: 'http://colorspace.utc24.io',
         description: '3D color scale visualizer to create better digital palettes.'
+    }, { 
+        name: 'BFoundation',
+        url: 'http://bfoundation.utc24.io',
+        description: 'A third-party Foundation platform wrapper offering a viewer-tailored interface.'
     }]
 
     const members = [{
