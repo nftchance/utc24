@@ -17,10 +17,6 @@ const Home = () => {
         name: 'True Freeze',
         url: 'https://truefreeze.xyz/',
         description: 'Public good patience primitive locking ETH for yield on your patience.'
-    }, {
-        name: 'Scooper',
-        url: 'http://scooper.utc24.io',
-        description: 'Save the NFTs and ETH sitting in a compromised Ethereum wallet.'
     }, { 
         name: 'Colorspace',
         url: 'http://colorspace.utc24.io',
@@ -127,7 +123,7 @@ const Home = () => {
                         <p className="lead">A digital family focused on redefining the way groups work towards creating incredible things.</p>
 
                         <a 
-                            href="https://discord.gg/ftQyGT7Hfe"
+                            href="https://discord.gg/utc24"
                             className="button"
                             target="_blank"
                             rel="noreferrer"
@@ -197,7 +193,7 @@ const Home = () => {
                     <p className="lead">With no application fee or primary focus of revenue generation, UTC±24 is always open and focused on building a family of incredibly talented and passionate people.</p>
 
                     <a 
-                        href="https://discord.gg/ftQyGT7Hfe"
+                        href="https://discord.gg/utc24"
                         target="_blank"
                         rel="noreferrer"
                         className="button"
