@@ -3,8 +3,8 @@ import React from 'react';
 import DiscordButton from './DiscordButton';
 import TwitterButton from './TwitterButton';
 
-import ProjectRoster from '../Org/ProjectRoster';
-import Roster from "../Org/Roster";
+import ProjectRoster from '../Roster/ProjectRoster';
+import Roster from "../Roster/Roster";
 
 import "./Home.css";
 
