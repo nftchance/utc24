@@ -28,6 +28,10 @@ h5 {
   color: rgba(255, 255, 255, .35);
 }
 
+p { 
+  color: rgba(255, 255, 255, .65);
+}
+
 a {
   color: #ffffff;
   font-weight: bold;
@@ -42,7 +46,8 @@ a:focus {
   color: white;
 }
 
-.button {
+.button,
+button {
   border: 2px solid white;
   background: white;
   border-radius: 4px;
@@ -55,7 +60,8 @@ a:focus {
 
 .button:hover,
 .button:active,
-.button:focus {
+.button:focus,
+button:hover {
   color: #212121;
   background: #ffffff9e;
 }

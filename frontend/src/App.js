@@ -6,11 +6,19 @@ import {
 
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { far } from '@fortawesome/pro-regular-svg-icons'
+
 import Home from "./Components/Home/Home";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Dashboard from "./Components/Dashboard/Wrapper/Wrapper";
 import Profile from "./Components/Dashboard/Profile/Profile";
 
-import './App.css';
+import Members from "./Components/Dashboard/Member/Members"; 
+import Projects from "./Components/Dashboard/Project/Projects";
+
+import './style/App.css';
+
+library.add(far)
 
 function App() {
 	return (
@@ -33,7 +41,10 @@ function App() {
 
 						{/* Member only pages */}
 						<Route path="/dashboard/" element={<Dashboard />} />
-						<Route path="/profile/" element={<Profile />} />
+						<Route path="/dashboard/profile/" element={<Profile />} />
+
+						<Route path="/dashboard/members/" element={<Members />} />
+						<Route path="/dashboard/projects/" element={<Projects />} />
 					</Routes>
 				</Router>
 			</HelmetProvider>

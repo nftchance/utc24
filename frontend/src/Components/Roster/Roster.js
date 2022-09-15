@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import MemberCard from "../Dashboard/Member/MemberCard";
+
 const Roster = () => {
     const [roster, setRoster] = useState([]);
 
@@ -15,21 +17,8 @@ const Roster = () => {
 
     return(
         <>
-            {roster.map(obj => {
-                return <a
-                    key={`member:${obj}`}
-                    href={obj.url}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    {/* Purposefully missing information to increase click-through rates ╰(*°▽°*)╯ */}
-                    <div
-                        className="member"
-                        style={{
-                            backgroundImage: `url(${obj.image})`
-                        }}
-                    ></div>
-                </a>
+            {roster.map(member => {
+                <MemberCard member={member} />
             })}
         </>
     )

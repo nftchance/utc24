@@ -19,7 +19,7 @@
 }
 
 /* Make all buttons in the sidebar white to transparent white depending on their importance level */
-.sidebar button {
+.sidebar a {
     color: white;
     background-color: #242424;
     width: 100%;
@@ -29,6 +29,13 @@
     font-weight: 700;
     margin-bottom: 10px;
     justify-content: flex-start;
+    text-decoration: none;
+}
+
+/* Move dropdown arrow to the right of the button */
+.sidebar a svg { 
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 .sidebar::after { 
