@@ -8,19 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Sidebar = () => {
     const tabs = [
         ['', {
-            Dashboard: {
-                icon: ['far', 'house'],
-                path: '/dashboard',
-                tabs: {}
-            },
             Profile: {
                 icon: ['far', 'person'],
                 path: '/dashboard/profile',
-                tabs: {}
-            },
-            "Season Badge": {
-                icon: ['far', 'badge'],
-                path: '/dashboard/badge',
                 tabs: {}
             },
             "Metrics": { 
@@ -38,11 +28,6 @@ const Sidebar = () => {
             Projects: {
                 icon: ['far', 'project-diagram'],
                 path: '/dashboard/projects',
-                tabs: {}
-            },
-            Grants: { 
-                icon: ['far', 'hand-holding-usd'],
-                path: '/dashboard/grants',
                 tabs: {}
             }
         }],

@@ -15,6 +15,8 @@ class MemberAddress(models.Model):
 
 
 class Member(models.Model):
+    active = models.BooleanField(default=True)
+
     name = models.CharField(max_length=100)
     bio = models.TextField(blank=True)
 

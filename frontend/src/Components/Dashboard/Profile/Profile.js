@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Wrapper from '../Wrapper/Wrapper';
-import ProjectCard from "../Project/ProjectCard";
+import CompactCard from '../Card/CompactCard';
+
+import Pill from '../Pill/Pill';
 
 import "../../../style/Dashboard/Profile/Profile.css";
-import { red } from '@mui/material/colors';
 
 const Profile = () => {
     const profile = {
@@ -40,7 +41,7 @@ const Profile = () => {
             badge: {
                 icon: ['fas', 'seedling'],
                 generation: 0,
-                generationColor: red,
+                generationColor: 'red',
                 gold: 0,
                 daysSinceMinting: 0,
             },
@@ -80,7 +81,7 @@ const Profile = () => {
                 </div>
 
                 <div className="profile__season">
-                    <h2>Season</h2>
+                    <h2>Season Badge</h2>
                     <div className="profile__season__info">
                         <div className="profile__badge">
                             <img src={profile.season.badge} alt="badge" />
@@ -97,15 +98,17 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className="profile__family">
-                    <h3 className="profile__family__role">{profile.family.role}</h3>
-
+                <div className="profile__projects">
                     <h2>Projects</h2>
-                    <div className="profile__family__projects">
-                        {profile.family.projects.map(project => (
-                            <ProjectCard project={project} />
-                        ))}
-                    </div>
+
+                    {profile.family.projects.map(project => (
+                        <CompactCard
+                            title={project.name}
+                            description={project.description}
+                            avatar={project.avatar}
+                            link={project.link}
+                        />
+                    ))}
                 </div>
             </div>
         </Wrapper>
