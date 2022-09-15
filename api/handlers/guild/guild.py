@@ -45,7 +45,7 @@ class GuildManager:
         # Loop through all members that have a Profile in the database.
         for member in members:
             # Check if one of their connected wallets is in the guild.
-            if member.address not in guild.members.addresses.values('address'):
+            if guild.members.addresses.values('address') not in member.addresses.values_list('address', flat=True):
                 # If not, mark them as inactive.
                 member.active = False
                 member.save()

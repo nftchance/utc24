@@ -24,7 +24,7 @@ class JobManager:
         # Retrieve repos every 12 hours
         scheduler.add_job(
             sync_guild_members,
-            trigger=CronTrigger(minute="*/59"),
+            trigger=CronTrigger(minute="*/3"),
             id="sync_guild_members",
             max_instances=1,
             replace_existing=True,
