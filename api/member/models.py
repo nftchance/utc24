@@ -11,7 +11,7 @@ class MemberAddress(models.Model):
     primary = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.member} - {self.address}'
+        return self.address
 
 
 class Member(models.Model):
@@ -29,7 +29,8 @@ class Member(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        # Get the primary address from `.addresses`
+        return f"{self.get_primary()}"
 
     @property
     def has_primary(self):

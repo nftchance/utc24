@@ -1,6 +1,6 @@
 import httpx
 
-from member.models import Member
+from member.models import Member, MemberAddress
 
 GUILD_ID = 'utc24'
 
@@ -27,25 +27,40 @@ class GuildManager:
         if not self.guild:
             self.get_guild(guild_id)
 
-        members = filter(lambda role: role['name'] == role_id, self.guild['roles'])
+        role = filter(lambda role: role['name'] == role_id, self.guild['roles'])
 
         # return the list of members from the role with the .name of 'Member'
-        return list(members)
+        return list(role)[0]['members']
         
-    def start_sync(self):
-        # Get the guild
-        guild = self.get_guild(GUILD_ID)
+    def start_sync(self, guild_id=GUILD_ID, role_id='Member'):
+        # Get the guild members
+        guild_members = self.get_guild_members(guild_id, role_id)
+    
+        print("Found {} members".format(len(guild_members)))
+        print(guild_members)
 
-        # We encountered an error, return
-        if not guild: return
-
-        # Get all members
+        # Get all members and set them to inactive
         members = Member.objects.all()
+        members.update(active=False)
 
-        # Loop through all members that have a Profile in the database.
-        for member in members:
-            # Check if one of their connected wallets is in the guild.
-            if guild.members.addresses.values('address') not in member.addresses.values_list('address', flat=True):
-                # If not, mark them as inactive.
-                member.active = False
+        # Loop through the guild members
+        for guild_member in guild_members:
+            # Determine if there is a member in the database with this address
+            member = members.filter(addresses__address=guild_member).first()
+
+            # If there is a member, update the active status and continue
+            if member:
+                member.active = True
                 member.save()
+                continue
+
+            print(f'Creating new member: {guild_member}')
+
+            # If there is no member, create a new one
+            address = MemberAddress.objects.create(
+                address=guild_member, 
+                primary=True
+            )
+            member = Member.objects.create()
+            member.addresses.add(address)
+            member.save()
