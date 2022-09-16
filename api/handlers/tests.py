@@ -4,7 +4,7 @@ from member.models import Member
 
 from .guild.guild import GuildManager
 
-class KeyManagerTestCase(TestCase):
+class GuildManagerTestCase(TestCase):
     def setUp(self):
         self.guild_manager = GuildManager()
 

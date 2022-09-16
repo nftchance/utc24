@@ -52,8 +52,6 @@ class GuildManager:
                 member.save()
                 continue
 
-            print(f'Creating new member: {guild_member}')
-
             # If there is no member, create a new one
             address = MemberAddress.objects.create(
                 address=guild_member, 
