@@ -34,17 +34,15 @@ class GuildManager:
         
     def start_sync(self, guild_id=GUILD_ID, role_id='Member'):
         # Get the guild members
+        guild_admins = self.get_guild_admins(guild_id)
         guild_members = self.get_guild_members(guild_id, role_id)
-    
-        print("Found {} members".format(len(guild_members)))
-        print(guild_members)
 
         # Get all members and set them to inactive
         members = Member.objects.all()
         members.update(active=False)
 
         # Loop through the guild members
-        for guild_member in guild_members:
+        for guild_member in guild_members + guild_admins:
             # Determine if there is a member in the database with this address
             member = members.filter(addresses__address=guild_member).first()
 
