@@ -17,7 +17,7 @@ const Roster = () => {
                     <p className="lead">The members of UTC±24 are from all around the world, but we all share one thing in common. A massive interest in building the future of Web3.</p>
 
                     <div className="members">
-                        {members.map(member => {
+                        {query.data.map(member => {
                             return <MemberCard member={member} />
                         })}
                     </div>
