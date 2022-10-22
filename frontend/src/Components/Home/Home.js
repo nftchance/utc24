@@ -22,22 +22,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <h2 style={{
-                    position: "relative",
-                    zIndex: 2
-                }}>GALAXIES BEING EXPLORED</h2>
-                <p className="lead">At UTC±24 the primary focus lies within positive impact and that brings a vast universe to wonder.</p>
-
-                <div className="projects">
-                    <ProjectRoster />
-                </div>
-
-                <h2>THE MEMBERS</h2>
-                <p className="lead">The members of UTC±24 are from all around the world, but we all share one thing in common. A massive interest in building the future of Web3.</p>
-
-                <div className="members">
-                    <Roster />
-                </div>
+                <ProjectRoster />
+                <Roster />
 
                 <div className="cta">
                     <h2>Think You Would Be A Good Fit?</h2>

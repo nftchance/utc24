@@ -1,11 +1,7 @@
-import { useState } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Wrapper from '../Wrapper/Wrapper';
 import CompactCard from '../Card/CompactCard';
-
-import Pill from '../Pill/Pill';
 
 import "../../../style/Dashboard/Profile/Profile.css";
 

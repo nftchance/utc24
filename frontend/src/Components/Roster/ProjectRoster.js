@@ -1,35 +1,44 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+
+const fetchProjects = async () => {
+    return fetch('projects/')
+        .then(res => res.json())
+}
 
 const ProjectRoster = () => {
-    const [roster, setRoster] = useState([]);
-
-    useEffect(() => {
-        const getRoster = () => {
-            fetch('members/')
-                .then(response => response.json())
-                .then(data => setRoster(data))
-        }
-
-        getRoster();
-    }, [])
+    const query = useQuery(['projects'], fetchProjects);
 
     return (
         <>
-            {roster.map(obj => {
-                return <a
-                    key={`project:${obj.name}`}
-                    href={obj.url} 
-                    target="_blank" 
-                    rel="noreferrer"
-                >
-                    <div className="project">
-                        <h3>{obj.name}</h3>
-                        <p>{obj.description}</p>
+            {
+                query.data &&
+                query.data?.length !== 0 &&
+                <>
+                    <h2 style={{
+                        position: "relative",
+                        zIndex: 2
+                    }}>GALAXIES BEING EXPLORED</h2>
+                    <p className="lead">At UTC±24 the primary focus lies within positive impact and that brings a vast universe to wonder.</p>
 
-                        <strong>Enter</strong>
+                    <div className="projects">
+                        {query.data.map(obj => {
+                            return <a
+                                key={`project:${obj.name}`}
+                                href={obj.url}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <div className="project">
+                                    <h3>{obj.name}</h3>
+                                    <p>{obj.description}</p>
+
+                                    <strong>Enter</strong>
+                                </div>
+                            </a>
+                        })}
                     </div>
-                </a>
-            })}
+                </>
+            }
         </>
     )
 }

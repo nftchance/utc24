@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import '../../../style/Dashboard/Card/CompactCard.css'
 
 const CompactCard = ({ avatar, title, description, link }) => {
