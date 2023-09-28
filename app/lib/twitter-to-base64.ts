@@ -105,7 +105,7 @@ const members = [
   {
     username: "tommylower",
     avatar:
-      "https://pbs.twimg.com/profile_images/1698876007799762945/08FhhIfM_400x400.jpg",
+      "https://media.discordapp.net/attachments/1019145621963296779/1157049900484268132/darkmodeldf.jpg?ex=65173231&is=6515e0b1&hm=14d6b08dc1eb06cfc9c367cc36f009d1d24059187ba408430666ebc18279c967&=&width=400&height=400",
   },
   {
     username: "0xelric_eth",
