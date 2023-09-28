@@ -172,6 +172,11 @@ const members = [
     avatar:
       "https://pbs.twimg.com/profile_images/1702452885424877568/oIxD5nH4_400x400.jpg",
   },
+  {
+    username: "JO3nft",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1668328472757018624/_CsAexcI_400x400.jpg",
+  },
 ];
 
 async function urlToBase64(url: string) {
