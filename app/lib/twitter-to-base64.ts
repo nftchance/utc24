@@ -177,6 +177,11 @@ const members = [
     avatar:
       "https://pbs.twimg.com/profile_images/1668328472757018624/_CsAexcI_400x400.jpg",
   },
+  {
+    username: "aaron_lamphere",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1653228411815596034/qtdv_sUL_400x400.jpg",
+  },
 ];
 
 async function urlToBase64(url: string) {
