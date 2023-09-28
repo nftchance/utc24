@@ -21,6 +21,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "axios": "^1.5.1",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",

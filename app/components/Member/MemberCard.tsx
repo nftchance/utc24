@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 const MemberCard = ({
   member,
@@ -14,7 +14,7 @@ const MemberCard = ({
       target="_blank"
       rel="noreferrer"
     >
-      <Image
+      <img
         src={member.avatar}
         alt="avatar"
         className="rounded-full w-14 h-14 hover:scale-95 transition-all duration-200"
