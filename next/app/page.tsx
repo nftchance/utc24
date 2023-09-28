@@ -1,5 +1,4 @@
 import React from "react";
-import { Metadata } from "next";
 
 import DiscordButton from "./components/DiscordButton";
 import TwitterButton from "./components/TwitterButton";
@@ -8,8 +7,6 @@ import ProjectRoster from "./components/Roster/ProjectRoster";
 import Roster from "./components/Roster/Roster";
 
 import "./page.css";
-
-
 
 export default function Page() {
   return (

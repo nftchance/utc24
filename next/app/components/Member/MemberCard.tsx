@@ -1,38 +1,28 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image";
 
-import "../../../style/Dashboard/Member/MemberCard.css";
+const MemberCard = ({
+  member,
+}: {
+  member: {
+    username: string;
+    avatar: string;
+  };
+}) => {
+  return (
+    <a
+      href={`https://twitter.com/${member.username}`}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Image
+        src={member.avatar}
+        alt="avatar"
+        className="rounded-full w-14 h-14 hover:scale-95 transition-all duration-200"
+        width={400}
+        height={400}
+      />
+    </a>
+  );
+};
 
-const MemberCard = ({ member: obj }) => {
-    return (
-        <>
-            {
-                obj.name && <div className="member">
-                    <div className="member__header">
-                        <img src={obj.avatar} alt="avatar" className="member__avatar" />
-
-                        <div className="member__header__info">
-                            <h3 className="member__name">{obj.name}</h3>
-                            <p className="member__bio">{obj.bio}</p>
-
-                            <div className="member__pills">
-                                <div className="member__social">
-                                    {obj.badge &&
-                                        <a
-                                            href={obj.badge}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FontAwesomeIcon icon={["fab", "discord"]} />
-                                        </a>
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </>
-    )
-}
-
-export default MemberCard
+export default MemberCard;

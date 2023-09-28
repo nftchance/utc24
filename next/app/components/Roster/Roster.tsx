@@ -1,4 +1,4 @@
-import MemberCard from "../Dashboard/Member/MemberCard";
+import MemberCard from "../Member/MemberCard";
 
 export default async function Roster() {
   const members = [
