@@ -17,7 +17,7 @@ const MemberCard = ({
       <img
         src={member.avatar}
         alt="avatar"
-        className="rounded-full w-14 h-14 hover:scale-95 transition-all duration-200"
+        className="rounded-full w-14 h-14 hover:scale-95 transition-all duration-200 m-auto"
         width={400}
         height={400}
       />

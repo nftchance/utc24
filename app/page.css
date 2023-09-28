@@ -4,8 +4,7 @@
 }
 
 .container {
-    margin-inline: auto;
-    max-width: 1080px;
+    padding-inline: 30px;
 }
 
 .hero {
@@ -44,10 +43,4 @@
         -18px -18px 36px #7d7d7d1e;
     border-radius: 50%;
     z-index: -3;
-}
-
-@media only screen and (max-width: 992px) {
-    .container {
-        margin-inline: 30px;
-    }
 }
