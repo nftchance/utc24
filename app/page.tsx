@@ -21,7 +21,7 @@ export default function Page() {
               A park for those building and participating in the crypto industry
               to come together and share ideas, collaborate, and build the
               future with a curated group of people that share the same
-              interests as you.
+              interests.
             </p>
 
             <div className="flex items-center">
