@@ -38,6 +38,12 @@ export default async function ProjectRoster() {
         "Research group that explores the intersection of crypto and future consumer cycles.",
       url: "https://cosanostra.gg",
     },
+    {
+      name: "Fountain Digital",
+      description:
+        "Fountain Digital facilitates trusted brokerage of high-value NFTs, Backed by Flamingo DAO.",
+      url: "https://fountaindigital.xyz/",
+    },
   ];
 
   return (
