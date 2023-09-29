@@ -41,8 +41,14 @@ export default async function ProjectRoster() {
     {
       name: "Fountain Digital",
       description:
-        "Fountain Digital facilitates trusted brokerage of high-value NFTs, Backed by Flamingo DAO.",
+        "Facilitates trusted brokerage of high-value NFTs, Backed by Flamingo DAO.",
       url: "https://fountaindigital.xyz/",
+    },
+    {
+      name: "Lamoka Analytics",
+      description:
+        "Provides high-value insights and data-driven solutions with onchain and offchain analytics.",
+      url: "https://lamoka.co/",
     },
   ];
 
