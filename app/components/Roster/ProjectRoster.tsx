@@ -21,22 +21,10 @@ export default async function ProjectRoster() {
       url: "https://colorspace.utc24.io",
     },
     {
-      name: "Badger",
-      description:
-        "Securely distribute and manage onchain permissions with ERC-1155 Badges.",
-      url: "https://trybadger.com",
-    },
-    {
       name: "Labor Markets Protocol",
       description:
         "A decentralized and onchain labor mechanism to socially coordinate high-quality work.",
       url: "https://metricsdao.xyz",
-    },
-    {
-      name: "Cosanostra",
-      description:
-        "Research group that explores the intersection of crypto and future consumer cycles.",
-      url: "https://cosanostra.gg",
     },
     {
       name: "Fountain Digital",
@@ -49,6 +37,12 @@ export default async function ProjectRoster() {
       description:
         "Provides high-value insights and data-driven solutions with onchain and offchain analytics.",
       url: "https://lamoka.co/",
+    },
+    {
+      name: "Badger",
+      description:
+        "Acquired by Flipside Crypto: Securely distribute and manage onchain permissions with ERC-1155 Badges.",
+      url: "https://trybadger.com",
     },
   ];
 
