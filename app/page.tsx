@@ -1,7 +1,7 @@
 import React from "react";
 
 import DiscordButton from "./components/DiscordButton";
-import TwitterButton from "./components/TwitterButton";
+// import TwitterButton from "./components/TwitterButton";
 
 import ProjectRoster from "./components/Roster/ProjectRoster";
 import Roster from "./components/Roster/Roster";
@@ -24,10 +24,10 @@ export default function Page() {
               interests.
             </p>
 
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <DiscordButton />
               <TwitterButton />
-            </div>
+            </div> */}
           </div>
         </div>
 
